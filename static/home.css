@@ -1,6 +1,7 @@
 body {
     font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif;
     font-size: 18px;
+    width: 100%;
 }
 
 .title a {
@@ -28,4 +29,9 @@ li.title:hover {
 	background-image: none;
 	background-color: #fff;
   box-shadow: none;
+}
+
+.row {
+    margin-left : 0;
+    margin-right: 0;
 }

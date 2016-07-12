@@ -9,7 +9,7 @@
 
 代码
 
-```
+```python
 print("hello world")
 ```
 
@@ -19,22 +19,23 @@ print("hello world")
 
 再来一大段文字
 
-抛去样式,间间单单的写文章,样式这
+抛去样式,间间单单的写文章,样式这种东西顺眼就好.什么标签啊,分类啊,都抵不过一篇有价值的文章,博客是用来分享东西.要记录知识,请用云笔记.
 
 ### 怎么使用
 1. clone 代码
 
-```
-git clone https://github.com/Petelin/PureGithubBolg.git
-```
+    ```
+    git clone https://github.com/Petelin/PureGithubBolg.git
+    ```
+2. 在`post`中添加markdown文件
 
-2. 在`post`中添加文件,改目录会被直接映射为主页文章链接的`url`
+3. 更改`pure.py`中的`website_dir`变量为你的`github page文件夹路径`
 
-3. 运行 `python3 pure`
+4. 运行 `python3 pure.py`
 
-4. 更改`pure.py`中的`website_dir`变量为你的`github page文件夹路径`
+#### 配置
 
-```
+```python
 # 将产生的所有文件输出到page文件夹下
 website_dir = "绝对路径/xxx.github.io"
 
@@ -47,7 +48,7 @@ jinja_env.globals["icon"] = "直接输入文件名字(直接放在static/images�
 jinja_env.globals["sociallist"] = (("github", "https://github.com/Petelin"),)
 ```
 
-5. 代码结构
+#### 代码结构
 
 ```
 PureGithubBolg
@@ -58,3 +59,8 @@ PureGithubBolg
 ├── static # 如果你想改样式,修改main.css 和 home.css
 └── templates # 模板文件
 ```
+
+#### 库
+使用 [markdown2](https://github.com/trentm/python-markdown2) + `fenced-code-blocks` 插件
+
+[更换代码高亮颜色,点击链接找到一个css,替换codehighlight.css](https://github.com/richleland/pygments-css)

@@ -4,9 +4,8 @@ import shutil
 import urllib.request
 from os.path import join
 
-from jinja2 import PackageLoader, Environment
 import markdown2
-
+from jinja2 import PackageLoader, Environment
 
 
 class Post(object):
@@ -21,18 +20,19 @@ class Post(object):
         self.title = self.filename
 
     def change_to_html(self):
-        html = markdown2.markdown( open(self.fullpath).read(), extras=['fenced-code-blocks'])
+        html = markdown2.markdown(open(self.fullpath).read(),
+                                  extras=['fenced-code-blocks','footnotes'])
         # print(html)
         return html
 
-    def write_html(self, html,title):
+    def write_html(self, html, title):
         if not os.path.exists(os.path.dirname(self.dest_file)):
             os.makedirs(os.path.dirname(self.dest_file))
         with open(self.dest_file, "w",
                   encoding="utf-8",
                   errors="xmlcharrefreplace") as fd:
-            html = jinja_env.get_template("post.html").render(title=title,content=html)
-            # print(html)
+            html = jinja_env.get_template("post.html").render(title=title, content=html)
+            print(html)
             fd.write(html)
 
 
@@ -50,7 +50,7 @@ def cover_all_post():
             title = re.findall("<h2>(.*?)</h2>", html)
             if title:
                 p.title = title[0]
-            p.write_html(html,title)
+            p.write_html(html, title)
             postlist.append(p)
         index_t = jinja_env.get_template("index.html")
         with open(join(website_dir, "index.html"), "w") as fd:

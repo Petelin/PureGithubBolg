@@ -3,6 +3,7 @@ html {
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size: 18px;
@@ -67,8 +68,9 @@ pre {
     background-color: Ivory;
     padding: 5px;
     line-height: 130%;
-    margin-left: 10px;
-    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     overflow-wrap: break-word;
     overflow: auto;
 }

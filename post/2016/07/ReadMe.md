@@ -27,9 +27,9 @@ print("hello world")
     ```
     git clone https://github.com/Petelin/PureGithubBolg.git
     ```
-2. 在`post`中添加markdown文件
+2. 在`post`中添加markdown格式文件
 
-3. 更改`pure.py`中的`website_dir`变量为你的`github page文件夹路径`
+3. 更改`pure.py`中的`website_dir`变量为你的github `page`文件夹路径
 
 4. 运行 `python3 pure.py`
 

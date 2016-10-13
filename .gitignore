@@ -92,3 +92,5 @@ ENV/
 
 .idea/
 /post/resume.md
+
+.DS_Store

@@ -12,7 +12,8 @@ class Post(object):
     def __init__(self, from_file):
         if not os.path.isfile(from_file): raise RuntimeError("not a file")
         self.fromfile = from_file
-        self.destfile = join(dirname(self.fromfile.replace(root_dir, website_dir)),
+        post_dir = join(root_dir, "post")
+        self.destfile = join(dirname(self.fromfile.replace(post_dir, website_dir)),
                              splitext(filename(self.fromfile))[0] + ".html")
         self.url = pathname2url(self.destfile.split(website_dir)[1])
         self._html = None
@@ -21,8 +22,10 @@ class Post(object):
     @property
     def html(self):
         if not self._html:
-            self._html = markdown2.markdown(open(self.fromfile).read(),
-                                            extras=['fenced-code-blocks', 'footnotes'])
+            with open(self.fromfile) as f:
+                self._html = markdown2.markdown(f.read(),
+                                                extras=['fenced-code-blocks', 'footnotes'])
+                print(self._html)
         return self._html
 
     @property
@@ -47,9 +50,13 @@ def cover_all_post():
     postlist = []
     for root, dirs, files in os.walk(post_basedir):
         for f_name in files:
+            # 设置忽略格式
+            if f_name.startswith(".") or f_name.endswith(("pdf",)): continue
+
             post_path = join(root, f_name)
             p = Post(post_path)
             p.write()
+            print(p.title, p.url)
             postlist.append(p)
     index_t = jinja_env.get_template("index.html")
     with open(join(website_dir, "index.html"), "w") as fd:

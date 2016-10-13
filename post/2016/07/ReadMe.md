@@ -24,9 +24,9 @@ print("hello world")
 ### 怎么使用
 1. clone 代码
 
-    ```
-    git clone https://github.com/Petelin/PureGithubBolg.git
-    ```
+```
+git clone https://github.com/Petelin/PureGithubBolg.git
+```
 2. 在`post`中添加markdown格式文件
 
 3. 更改`pure.py`中的`website_dir`变量为你的github `page`文件夹路径

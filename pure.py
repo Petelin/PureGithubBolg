@@ -104,7 +104,7 @@ website_dir = "/Users/zhangxiaolin/Documents/github/Petelin.github.io"
 jinja_env.globals["title"] = "简简单单"
 
 # 博客图标
-jinja_env.globals["icon"] = "Yc.jgp"
+jinja_env.globals["icon"] = "logo.bmp"
 
 # 直接添加名字和地址
 jinja_env.globals["sociallist"] = (("github", "https://github.com/Petelin"),)

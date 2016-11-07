@@ -36,7 +36,7 @@ print("hello world")
     ```
 2. 在`post`中添加markdown文件
 
-3. 更改`pure.py`中的`website_dir`变量为你的`github page文件夹路径`
+3. 更改`pure.py`中的`website_dir`变量为你的`github page`(需要你自己创建一个github page,然后克隆到本地,不要克隆我的)文件夹路径.
 
 4. 运行 `python3 pure.py`
 
@@ -71,3 +71,7 @@ PureGithubBolg
 使用 [markdown2](https://github.com/trentm/python-markdown2) + `fenced-code-blocks` 插件
 
 [更换代码高亮颜色,点击链接找到一个css,替换codehighlight.css](https://github.com/richleland/pygments-css)
+
+
+#### 欢迎交流
+任何问题,欢迎issue

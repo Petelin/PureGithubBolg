@@ -53,8 +53,8 @@ def all_post_file():
             if f_name.startswith(".") or f_name.endswith(("pdf",)): continue
             post_path = join(root, f_name)
             print(post_path)
-            modify_time = os.stat(post_path).st_ctime
-            postlist.append((post_path, modify_time))
+            c_time = os.stat(post_path).st_ctime
+            postlist.append((post_path, c_time))
     return sorted(postlist, key=lambda x:x[1], reverse=True)
 
 def cover_all_post():

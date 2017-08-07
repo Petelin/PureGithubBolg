@@ -7,11 +7,22 @@ html {
 body {
     font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size: 18px;
-    margin: 5% 5%;
+    /*margin-top: 5%;*/
+    margin: auto;
     padding: 2% 5%;
     width: 80%;
     line-height: 250%;
     border: 1px solid LightGrey;
+}
+
+@media screen and (min-device-width: 900px) {
+　　body{
+      margin-top: 5%;
+      margin: auto;
+      padding: 2% 5%;
+      width: 40%;
+      line-height: 250%;
+　　}
 }
 
 H1 {

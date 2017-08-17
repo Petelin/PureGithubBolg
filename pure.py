@@ -26,6 +26,8 @@ class Post(object):
             with open(self.fromfile) as f:
                 self._html = markdown2.markdown(f.read(),
                                                 extras=['fenced-code-blocks', 'footnotes'])
+                c = re.compile("<p>(\\n)+</p>")
+                self._html = re.sub(c, '</br>', self._html)
                 print(self._html)
         return self._html
 

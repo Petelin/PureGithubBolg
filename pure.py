@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import os
 import re
 import shutil
@@ -101,7 +102,7 @@ root_dir = dirname(__file__)
 jinja_env = Environment(loader=PackageLoader(__name__))
 
 # 文件输出地址,确定已经git init,可以直接git push origin master
-website_dir = "/Users/zhangxiaolin/Documents/github/Petelin.github.io"
+website_dir = "/Users/xiaolin.zhang/Documents/github/Petelin.github.io"
 
 # 博客名字
 jinja_env.globals["title"] = "简简单单"

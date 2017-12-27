@@ -22,6 +22,26 @@
 
 漏桶算法可以看作是令牌桶算法的一个特例, 设令牌加入速度和令牌桶容量一样就得到了漏桶算法.
 
+## 只限制并行数量
+go 语言可以通过这种方式限制并行数量, 这种方式实际上就是队列, 这种方式只能限制同时有多少个task在执行, 不能控制速率, 一段时间完成的多少要看每个任务执行的速度.
+```
+var sem = make(chan int, MaxOutstanding)
+
+func handle(r *Request) {
+    sem <- 1    // Wait for active queue to drain.
+    process(r)  // May take a long time.
+    <-sem       // Done; enable next request to run.
+}
+
+func Serve(queue chan *Request) {
+    for {
+        req := <-queue
+        go handle(req)  // Don't wait for handle to finish.
+    }
+}
+
+```
+
 # 微服务需要限流
 一个服务的处理速度是有限的, 如果你不限制这个速度, 最终系统会被越来越多的流量拖垮, 一个请求也不能处理. 如果加上了限流, 无论调用方流量如何变化, 时钟能保证本服务的稳定.
 限流可以是在客户端做, 也可以是现在服务段做. 最高的速度应该由服务方告知其他调用方.

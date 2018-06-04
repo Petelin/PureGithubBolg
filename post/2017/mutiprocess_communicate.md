@@ -241,7 +241,8 @@ if __name__ == '__main__':
 
 这个速度不稳定, 最快有```through socket 261834.36615940317 KB/s```
 
-参考
+## 参考
+
 1. [深刻理解Linux进程间通信（IPC）](https://www.ibm.com/developerworks/cn/linux/l-ipc/)
 2. [文件没有直接写入磁盘](https://stackoverflow.com/questions/45727981/why-write-to-a-file-is-faster-than-mutiprocessing-pipe#comment78415844_45727981)
 3. [pipe缓存区大小](https://unix.stackexchange.com/questions/11946/how-big-is-the-pipe-buffer/11954#11954)

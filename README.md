@@ -1,6 +1,6 @@
 # PureGithubBolg
 
-效果请看: <https://petelin.github.io>
+效果请看: <https://petelin.github.io/2016/07/ReadMe.html>
 
 来源于[王垠的博客](http://www.yinwang.org/)，非常简单优雅的博客，使用markdown写作，可以自定义css样式。
 更多的是一种思路,markdown 就是 html,我们只要自定义标签的样式,就可以做自己想要的东西.简单而高效.

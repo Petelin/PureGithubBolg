@@ -29,7 +29,7 @@ class Post(object):
                                                 extras=['fenced-code-blocks', 'footnotes'])
                 c = re.compile("<p>(\\n)+</p>")
                 self._html = re.sub(c, '</br>', self._html)
-                print(self._html)
+                # print(self._html)
         return self._html
 
     @property
@@ -55,7 +55,7 @@ def all_post_file():
             # 设置忽略格式
             if f_name.startswith(".") or f_name.endswith(("pdf",)): continue
             post_path = join(root, f_name)
-            print(post_path)
+            # print(post_path)
             c_time = os.stat(post_path).st_ctime
             postlist.append((post_path, c_time))
     return sorted(postlist, key=lambda x:x[1], reverse=True)
@@ -65,7 +65,7 @@ def cover_all_post():
     post_basedir = join(root_dir, "post")
     postlist = []
     for (post_path, _) in all_post_file():
-        print(post_path)
+        # print(post_path)
         p = Post(post_path)
         p.write()
         print(p.title, p.url)

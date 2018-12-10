@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import re
@@ -24,12 +24,10 @@ class Post(object):
     @property
     def html(self):
         if not self._html:
-            with open(self.fromfile) as f:
-                self._html = markdown2.markdown(f.read(),
-                                                extras=['fenced-code-blocks', 'footnotes'])
+            with open(self.fromfile, errors='ignore') as f:
+                self._html = markdown2.markdown(f.read(), extras=['fenced-code-blocks', 'footnotes'])
                 c = re.compile("<p>(\\n)+</p>")
                 self._html = re.sub(c, '</br>', self._html)
-                # print(self._html)
         return self._html
 
     @property
@@ -102,7 +100,7 @@ root_dir = dirname(__file__)
 jinja_env = Environment(loader=PackageLoader(__name__))
 
 # 文件输出地址,确定已经git init,可以直接git push origin master
-website_dir = "/Users/xiaolin.zhang/UDocuments/github/Petelin.github.io"
+website_dir = "../Petelin.github.io"
 
 # 博客名字
 jinja_env.globals["title"] = "简简单单"

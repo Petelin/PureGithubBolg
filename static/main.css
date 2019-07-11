@@ -1,0 +1,154 @@
+html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 5%;
+    padding: 2% 5%;
+    width: 80%;
+    line-height: 160%;
+    border: 1px solid LightGrey;
+}
+
+@media(min-width:992px){
+  body {
+      margin: auto;
+      margin-top: 5%;
+      width: 40%;
+  }
+}
+
+H1 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+}
+
+H2 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-bottom: 60px;
+    margin-bottom: 40px;
+    padding: 5px;
+    border-bottom: 2px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666;
+}
+
+H3 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666;
+    font-size: 20px;
+}
+
+H4 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666;
+}
+
+li {
+    margin-left: 10px;
+}
+
+blockquote {
+    border-left: 4px lightgrey solid;
+    padding-left: 5px;
+    margin-left: 20px;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+pre {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 90%;
+    border: solid 1px lightgrey;
+    background-color: Ivory;
+    padding: 5px;
+    line-height: 130%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+code {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 90%;
+}
+
+p code {
+    padding: 0.2em;
+    margin: 0 0.2em;
+    border-radius: 0.5em;
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    cursor: crosshair;
+    border-bottom: 1px dashed Red;
+    padding: 1px;
+    color: black;
+}
+
+a:hover {
+    background-color: LightGrey;
+}
+
+img {
+    max-width: 100%;
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 0 10px #555;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    color: LightGrey;
+}
+
+p.notice {
+    color: #AA4433;
+    font-size: 14px;
+}
+
+div.tweet p {
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-left: 10px solid #f28500;
+    padding: 2px 0.5em 2px 0.5em;
+    margin-bottom: 20px;
+    background-color: #fbfbfb;
+}
+
+div.tweet i {
+    color: brown;
+    font-size: 14px;
+    font-style: normal;
+    border: 1px solid #aaa;
+    margin-right: 0.5em;
+    padding: 0px 2px;
+}

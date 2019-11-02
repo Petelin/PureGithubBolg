@@ -33,7 +33,11 @@ class Post(object):
     @property
     def title(self):
         if not self._title:
-            title = re.findall("<h2>(.*?)</h2>", self.html)
+            title1 = re.findall("<h1>(.*?)</h1>", self.html)
+            if title1:
+                title = title1
+            else:
+                title = re.findall("<h2>(.*?)</h2>", self.html)
             self._title = title[0] if title else filename(self.destfile).rsplit(".")[0]
         return self._title
 
